@@ -12,13 +12,13 @@ import {
   View
 } from 'react-native';
 
-import Splash from './bootstrap/Splash'
-import Login from './src/components/login/Login'
+
+import Greeting from './bootstrap/Greeting'
 
 export default class projectx extends Component {
   render() {
     return (
-      <Login />
+      <Greeting />
     );
   }
 }
