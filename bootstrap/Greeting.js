@@ -9,19 +9,23 @@ import {
 import Splash from './Splash'
 import Intro from './Intro'
 import Intro1 from './Intro1'
-import Login from '../src/components/login/Login'
+var userService = require('../src/components/util/user_service');
+import {FirstStack} from '../src/components/routes/firstRoute.js'
+import Dashboard from '../src/components/dashboard/Dashboard'
 
 export default class Greeting extends Component {
 
   render() {
-     const isFirstTime = false;
-     if(isFirstTime){
+    var user = userService.getCurrentUser();
+    alert(user);
+
+     if(user!=null){
        screen =  <Intro />;
      }else {
-       screen= <Login />;
+       screen= <FirstStack />;
      }
     return (
-      screen
+   screen
     );
   }
 }

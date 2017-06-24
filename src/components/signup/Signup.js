@@ -8,17 +8,14 @@ import {
   StyleSheet,
   Image,
 } from 'react-native';
-import LoginForm from './LoginForm';
-export default class Login extends Component {
-  constructor(props) {
-        super(props);
-      }
 
-  openSignup() {
-    this.props.navigation.navigate('Signup',null);
-  }
+import SignUpForm from './SignUpForm' ;
+
+export default class Signup extends Component {
   render() {
     const { params } = this.props.navigation.state;
+
+
 
     return (
       <KeyboardAvoidingView  behaviour="padding"  style={styles.container} >
@@ -30,7 +27,7 @@ export default class Login extends Component {
       <Text style={styles.title}> An app for projectX using react native</Text>
       </View>
       <View style={styles.formContainer}>
-      <LoginForm   nav={this.props.navigation}/>
+      <SignUpForm nav={this.props.navigation} />
       </View>
       </KeyboardAvoidingView>
     );
